@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tier 4 IT Solutions - Microsoft Teams Phone & Copilot Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #393939;
+        }
+        /* Custom accent color classes */
+        .accent-bg { background-color: #8D0D0F; }
+        .accent-text { color: #8D0D0F; }
+        .accent-border { border-color: #8D0D0F; }
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Subtle fade-in animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Hover effect for service cards */
+        .service-card {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        /* Header scroll effect */
+        #header.header-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        /* Active navigation link style */
+        .nav-link.active {
+            color: #8D0D0F;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="#hero" class="flex items-center gap-3">
+                    <!-- Logo: Replace with your logo file -->
+                    <img src="https://placehold.co/140x40/8D0D0F/FFFFFF?text=Tier+4+Logo" alt="Tier 4 IT Solutions Logo" class="h-10">
+                </a>
+                <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#teams-phone-solutions" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Teams Phone</a>
+                    <a href="#copilot-solutions" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Copilot</a>
+                    <a href="#msp-partner" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">For MSPs</a>
+                    <a href="#value-roi" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Value & ROI</a>
+                    <a href="#contact" class="accent-bg text-white font-bold py-2 px-5 rounded-full text-base hover:opacity-90 transition-opacity duration-300 shadow-sm">
+                        Contact Us
+                    </a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t">
+            <a href="#teams-phone-solutions" class="nav-link block py-2 text-gray-600 hover:accent-text">Teams Phone</a>
+            <a href="#copilot-solutions" class="nav-link block py-2 text-gray-600 hover:accent-text">Copilot</a>
+            <a href="#msp-partner" class="nav-link block py-2 text-gray-600 hover:accent-text">For MSPs</a>
+            <a href="#value-roi" class="nav-link block py-2 text-gray-600 hover:accent-text">Value & ROI</a>
+            <a href="#contact" class="nav-link block py-2 text-gray-600 hover:accent-text">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative bg-gray-800 text-white pt-40 pb-28 md:pt-56 md:pb-40">
+             <div class="absolute inset-0">
+                <img src="https://placehold.co/1920x1080/393939/F2F2F2?text=Modern+Office" class="w-full h-full object-cover" alt="Modern office background">
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 fade-in-up">
+                        Modernize Your Workplace with
+                        <span class="accent-text">Teams Phone & Copilot.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-10 fade-in-up" style="transition-delay: 150ms;">
+                        We are expert consultants for Microsoft's leading communication and AI platforms. We help you unify communications with Teams Phone and unlock productivity with Copilot.
+                    </p>
+                    <div class="fade-in-up" style="transition-delay: 300ms;">
+                        <a href="#contact" class="accent-bg text-white font-bold py-3 px-8 rounded-full text-lg hover:opacity-90 transition-opacity duration-300 shadow-lg">
+                            Consult an Expert
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teams Phone Solutions Section -->
+        <section id="teams-phone-solutions" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center fade-in-up mb-16">
+                    <span class="accent-text font-semibold">Unified Communications</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#393939] mt-2 mb-5">Microsoft Teams Phone</h2>
+                    <p class="text-lg text-gray-600">
+                        Unify your business communications by enabling reliable, flexible, and secure PSTN calling directly from the Teams app your employees use every day.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+                    <div class="bg-[#F2F2F2] p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 150ms;">
+                        <i data-lucide="rss" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Connectivity</h3>
+                        <div class="space-y-4">
+                            <p><strong>Dial Plans:</strong> A straightforward, all-in-the-cloud solution managed entirely within Microsoft 365.</p>
+                            <p><strong>Operator Connect:</strong> Integrate your preferred third-party telephone carrier directly into Teams.</p>
+                            <p><strong>Direct Routing:</strong> The ultimate in flexibility, allowing you to connect your own telecom infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#F2F2F2] p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 300ms;">
+                        <i data-lucide="smartphone" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Devices</h3>
+                        <div class="space-y-4">
+                            <p><strong>Softphone:</strong> Use the Teams app on your computer or mobile device as a full-featured business phone.</p>
+                            <p><strong>Certified Desk Phones:</strong> For a traditional office feel, use Teams-certified hardware from leading brands.</p>
+                            <p><strong>SIP Gateway:</strong> Connect existing compatible SIP phones to Teams, preserving your hardware investments.</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#F2F2F2] p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 450ms;">
+                        <i data-lucide="settings-2" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Features</h3>
+                        <div class="space-y-4">
+                            <p><strong>Call Queues & Auto Attendants:</strong> Manage high call volumes and route callers intelligently.</p>
+                            <p><strong>Voicemail & Transcription:</strong> Get visual voicemail with transcription delivered to your email.</p>
+                            <p><strong>SMS & Extensibility:</strong> Enable business texting and integrate with other apps and workflows.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copilot Solutions Section -->
+        <section id="copilot-solutions" class="py-20 md:py-32 bg-[#F2F2F2]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center fade-in-up mb-16">
+                    <span class="accent-text font-semibold">AI-Powered Productivity</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#393939] mt-2 mb-5">Microsoft Copilot</h2>
+                    <p class="text-lg text-gray-600">
+                        Transform productivity with a revolutionary AI assistant. We help you harness its full power to automate tasks, gain insights, and accelerate workflows.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+                    <div class="bg-white p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 150ms;">
+                        <i data-lucide="plug-zap" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Integration</h3>
+                        <div class="space-y-4">
+                            <p><strong>Readiness Assessment:</strong> We analyze your data security and permissions to ensure a safe and effective rollout.</p>
+                            <p><strong>Licensing & Deployment:</strong> We help you navigate licensing and deploy Copilot to the right users and teams.</p>
+                            <p><strong>Data Grounding:</strong> Ensure Copilot is connected to the right Microsoft 365 data sources for relevant results.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 300ms;">
+                        <i data-lucide="bot" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Automation</h3>
+                        <div class="space-y-4">
+                            <p><strong>Meeting Efficiency:</strong> Summarize meetings, create action items, and get caught up on discussions in minutes.</p>
+                            <p><strong>Content Creation:</strong> Draft emails, generate reports, and create presentations based on your data and prompts.</p>
+                            <p><strong>Workflow Optimization:</strong> Identify and build custom prompts to automate your unique and repetitive business processes.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 450ms;">
+                        <i data-lucide="users" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Adoption</h3>
+                        <div class="space-y-4">
+                            <p><strong>User Training:</strong> Drive adoption with tailored training that teaches your team to use Copilot effectively and responsibly.</p>
+                            <p><strong>Copilot Studio:</strong> Extend capabilities by building custom GPTs and plugins for your line-of-business applications.</p>
+                             <p><strong>Governance & Analytics:</strong> Monitor usage, track ROI, and manage security policies for your Copilot environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- For MSPs Section -->
+        <section id="msp-partner" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center fade-in-up mb-16">
+                    <span class="accent-text font-semibold">A Partnership for Growth</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#393939] mt-2 mb-5">For Managed Service Providers</h2>
+                    <p class="text-lg text-gray-600">
+                        Don't have in-house experts for Teams Phone or Copilot? We partner with MSPs to provide staff augmentation, allowing you to offer these high-value services to your clients under your own brand.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
+                     <div class="bg-[#F2F2F2] p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 150ms;">
+                        <i data-lucide="briefcase" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Expand Your Portfolio</h3>
+                        <p class="text-gray-600">Instantly add expert-level Teams Phone and Copilot consulting to your service offerings without the overhead of hiring and training new staff.</p>
+                    </div>
+                     <div class="bg-[#F2F2F2] p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 300ms;">
+                        <i data-lucide="trending-up" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Unlock New Revenue</h3>
+                        <p class="text-gray-600">Generate new, high-margin recurring revenue streams by delivering the modern solutions your clients are asking for.</p>
+                    </div>
+                     <div class="bg-[#F2F2F2] p-8 rounded-2xl fade-in-up service-card" style="transition-delay: 450ms;">
+                        <i data-lucide="shield-check" class="w-10 h-10 accent-text mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-4 text-[#393939]">Deepen Client Trust</h3>
+                        <p class="text-gray-600">Become an even more valuable partner to your clients by solving their communication and productivity challenges, strengthening retention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value & ROI Section -->
+        <section id="value-roi" class="py-20 md:py-32 bg-[#F2F2F2]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center fade-in-up">
+                    <span class="accent-text font-semibold">A Smarter Investment</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#393939] mt-2 mb-5">Create a Cycle of Value & ROI</h2>
+                    <p class="text-lg text-gray-600 mb-12">
+                        Our approach goes beyond simple cost-cutting. We help you redirect savings from legacy systems into powerful AI tools, creating a virtuous cycle of efficiency and innovation.
+                    </p>
+                    <div class="space-y-8 text-left max-w-2xl mx-auto">
+                         <div class="flex items-start gap-6">
+                            <div class="accent-bg text-white rounded-full flex-shrink-0 w-12 h-12 flex items-center justify-center shadow-lg">
+                                <i data-lucide="axe" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#393939]">Cut Legacy Costs</h3>
+                                <p class="text-gray-600">Eliminate expensive hardware, maintenance contracts, and traditional telephone bills by consolidating communications in Microsoft Teams.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start gap-6">
+                            <div class="accent-bg text-white rounded-full flex-shrink-0 w-12 h-12 flex items-center justify-center shadow-lg">
+                                <i data-lucide="recycle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#393939]">Reinvest in Productivity</h3>
+                                <p class="text-gray-600">Reallocate your saved budget into Microsoft Copilot licenses, transforming operational savings into a powerful tool for employee efficiency.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start gap-6">
+                            <div class="accent-bg text-white rounded-full flex-shrink-0 w-12 h-12 flex items-center justify-center shadow-lg">
+                                <i data-lucide="rocket" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#393939]">Boost Your Bottom Line</h3>
+                                <p class="text-gray-600">With Copilot automating tasks and accelerating workflows, your team can focus on high-impact work, driving innovation and further increasing profitability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                 <div class="max-w-4xl mx-auto text-center bg-[#393939] text-white p-10 md:p-16 rounded-2xl shadow-2xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 fade-in-up">Ready to transform your business?</h2>
+                    <p class="text-lg md:text-xl text-gray-300 mb-12 fade-in-up" style="transition-delay: 150ms;">
+                        Contact us today to discuss your strategy for Teams Phone and Copilot. Let's build a unified, intelligent platform that empowers your employees and grows your business.
+                    </p>
+                    <div class="mt-12 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 fade-in-up" style="transition-delay: 300ms;">
+                        <a href="tel:813-278-1234" class="group flex items-center gap-4 text-xl font-semibold text-white transition-colors hover:accent-text">
+                            <i data-lucide="phone" class="w-7 h-7 text-gray-400 transition-colors group-hover:accent-text"></i>
+                            <span>813-278-1234</span>
+                        </a>
+                        <a href="mailto:info@tier4itsolutions.com" class="group flex items-center gap-4 text-xl font-semibold text-white transition-colors hover:accent-text">
+                             <i data-lucide="mail" class="w-7 h-7 text-gray-400 transition-colors group-hover:accent-text"></i>
+                            <span>info@tier4itsolutions.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#393939] text-gray-300">
+        <div class="container mx-auto px-6 pt-16 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-8 text-center md:text-left">
+                <!-- Column 1: Company -->
+                <div class="md:col-span-12 lg:col-span-5">
+                     <a href="#hero" class="flex items-center justify-center md:justify-start gap-3 mb-4">
+                        <img src="https://placehold.co/140x40/8D0D0F/FFFFFF?text=Tier+4+Logo" alt="Tier 4 IT Solutions Logo" class="h-10">
+                    </a>
+                    <p class="text-gray-400">Expert consulting for Microsoft Teams Phone & Copilot to modernize your workplace.</p>
+                </div>
+                
+                <!-- Column 2: Solutions -->
+                <div class="md:col-span-4 lg:col-span-2">
+                    <h3 class="text-lg font-semibold text-white mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#teams-phone-solutions" class="text-gray-400 hover:accent-text transition-colors">Teams Phone</a></li>
+                        <li><a href="#copilot-solutions" class="text-gray-400 hover:accent-text transition-colors">Copilot</a></li>
+                        <li><a href="#msp-partner" class="text-gray-400 hover:accent-text transition-colors">For MSPs</a></li>
+                        <li><a href="#value-roi" class="text-gray-400 hover:accent-text transition-colors">Value & ROI</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                 <div class="md:col-span-4 lg:col-span-2">
+                    <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:accent-text transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:accent-text transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:accent-text transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social -->
+                <div class="md:col-span-4 lg:col-span-3">
+                    <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:accent-text transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 mt-8 text-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> Tier 4 IT Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Fade-in on scroll animation
+        const faders = document.querySelectorAll('.fade-in-up');
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+        // Header scroll and active nav link logic
+        const header = document.getElementById('header');
+        const sections = document.querySelectorAll('main > section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            // Header style on scroll
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+
+            // Active nav link highlighting
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
