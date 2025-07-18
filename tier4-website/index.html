@@ -47,6 +47,9 @@
             background-color: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
+        #header.header-scrolled.dark {
+             background-color: rgba(17, 24, 39, 0.95); /* dark:bg-gray-900 */
+        }
         /* Active navigation link style */
         .nav-link.active {
             color: #8D0D0F;
@@ -57,39 +60,37 @@
 <body class="antialiased">
 
     <!-- Header -->
-    <header id="header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200 transition-all duration-300">
+    <header id="header" class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
         <div class="container mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="#hero" class="flex items-center gap-3">
                     <!-- Logo: Dynamically changes for light/dark mode -->
-                    <picture>
-                        <source srcset="assets/logo_greyscale.png" media="(prefers-color-scheme: dark)">
-                        <img src="assets/logo.png" alt="Tier 4 IT Solutions Logo" class="h-10">
-                    </picture>
+                    <img src="assets/logo_greyscale.png" alt="Tier 4 IT Solutions Logo" class="h-10 hidden dark:block">
+                    <img src="assets/logo.png" alt="Tier 4 IT Solutions Logo" class="h-10 block dark:hidden">
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                    <a href="#teams-phone-solutions" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Teams Phone</a>
-                    <a href="#copilot-solutions" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Copilot</a>
-                    <a href="#msp-partner" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">For MSPs</a>
-                    <a href="#value-roi" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Value & ROI</a>
+                    <a href="#teams-phone-solutions" class="nav-link text-gray-600 dark:text-gray-300 hover:accent-text transition-colors duration-300">Teams Phone</a>
+                    <a href="#copilot-solutions" class="nav-link text-gray-600 dark:text-gray-300 hover:accent-text transition-colors duration-300">Copilot</a>
+                    <a href="#msp-partner" class="nav-link text-gray-600 dark:text-gray-300 hover:accent-text transition-colors duration-300">For MSPs</a>
+                    <a href="#value-roi" class="nav-link text-gray-600 dark:text-gray-300 hover:accent-text transition-colors duration-300">Value & ROI</a>
                     <a href="#contact" class="accent-bg text-white font-bold py-2 px-5 rounded-full text-base hover:opacity-90 transition-opacity duration-300 shadow-sm">
                         Contact Us
                     </a>
                 </nav>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <button id="mobile-menu-button" class="text-gray-800 dark:text-gray-200 focus:outline-none">
                         <i data-lucide="menu" class="w-7 h-7"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white border-t">
-            <a href="#teams-phone-solutions" class="nav-link block py-2 text-gray-600 hover:accent-text">Teams Phone</a>
-            <a href="#copilot-solutions" class="nav-link block py-2 text-gray-600 hover:accent-text">Copilot</a>
-            <a href="#msp-partner" class="nav-link block py-2 text-gray-600 hover:accent-text">For MSPs</a>
-            <a href="#value-roi" class="nav-link block py-2 text-gray-600 hover:accent-text">Value & ROI</a>
-            <a href="#contact" class="nav-link block py-2 text-gray-600 hover:accent-text">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <a href="#teams-phone-solutions" class="nav-link block py-2 text-gray-600 dark:text-gray-300 hover:accent-text">Teams Phone</a>
+            <a href="#copilot-solutions" class="nav-link block py-2 text-gray-600 dark:text-gray-300 hover:accent-text">Copilot</a>
+            <a href="#msp-partner" class="nav-link block py-2 text-gray-600 dark:text-gray-300 hover:accent-text">For MSPs</a>
+            <a href="#value-roi" class="nav-link block py-2 text-gray-600 dark:text-gray-300 hover:accent-text">Value & ROI</a>
+            <a href="#contact" class="nav-link block py-2 text-gray-600 dark:text-gray-300 hover:accent-text">Contact</a>
         </div>
     </header>
 
@@ -304,10 +305,7 @@
                 <!-- Column 1: Company -->
                 <div class="md:col-span-12 lg:col-span-5">
                      <a href="#hero" class="flex items-center justify-center md:justify-start gap-3 mb-4">
-                        <picture>
-                            <source srcset="assets/logo_greyscale.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/logo.png" alt="Tier 4 IT Solutions Logo" class="h-10">
-                        </picture>
+                        <img src="assets/logo_greyscale.png" alt="Tier 4 IT Solutions Logo" class="h-10">
                     </a>
                     <p class="text-gray-400">Expert consulting for Microsoft Teams Phone & Copilot to modernize your workplace.</p>
                 </div>
@@ -398,8 +396,12 @@
             // Header style on scroll
             if (window.scrollY > 50) {
                 header.classList.add('header-scrolled');
+                if (document.documentElement.classList.contains('dark')) {
+                    header.classList.add('dark');
+                }
             } else {
                 header.classList.remove('header-scrolled');
+                header.classList.remove('dark');
             }
 
             // Active nav link highlighting
