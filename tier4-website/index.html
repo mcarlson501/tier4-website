@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tier 4 IT Solutions - Microsoft Teams Phone & Copilot Experts</title>
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,8 +61,11 @@
         <div class="container mx-auto px-6">
             <div class="flex items-center justify-between h-20">
                 <a href="#hero" class="flex items-center gap-3">
-                    <!-- Logo: Replace with your logo file -->
-                    <img src="assets/logo.png" alt="Tier 4 IT Solutions Logo" class="h-10">
+                    <!-- Logo: Dynamically changes for light/dark mode -->
+                    <picture>
+                        <source srcset="assets/logo_greyscale.png" media="(prefers-color-scheme: dark)">
+                        <img src="assets/logo.png" alt="Tier 4 IT Solutions Logo" class="h-10">
+                    </picture>
                 </a>
                 <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
                     <a href="#teams-phone-solutions" class="nav-link text-gray-600 hover:accent-text transition-colors duration-300">Teams Phone</a>
@@ -301,7 +304,10 @@
                 <!-- Column 1: Company -->
                 <div class="md:col-span-12 lg:col-span-5">
                      <a href="#hero" class="flex items-center justify-center md:justify-start gap-3 mb-4">
-                        <img src="assets/logo_greyscale.png" alt="Tier 4 IT Solutions Logo" class="h-10">
+                        <picture>
+                            <source srcset="assets/logo_greyscale.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/logo.png" alt="Tier 4 IT Solutions Logo" class="h-10">
+                        </picture>
                     </a>
                     <p class="text-gray-400">Expert consulting for Microsoft Teams Phone & Copilot to modernize your workplace.</p>
                 </div>
@@ -336,7 +342,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-8 mt-8 text-center text-sm text-gray-500">
-                <p>&copy; <span id="year"></span> Tier 4 IT Solutions LLC. All Rights Reserved.</p>
+                <p>&copy; <span id="year"></span> Tier 4 IT Solutions. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
